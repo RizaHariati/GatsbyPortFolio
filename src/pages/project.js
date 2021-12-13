@@ -7,6 +7,13 @@ import Layout from "../components/Layout"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import Seo from "../components/SEO"
+import {
+  paperBanner,
+  sideAvatar,
+  gridBanner,
+  titleFont,
+  descriptionFont,
+} from "../styles/styles"
 
 const useStyles = makeStyles(theme => {
   return {
@@ -18,30 +25,7 @@ const useStyles = makeStyles(theme => {
         width: "100%",
       },
     },
-    paper: {
-      height: "fit-content",
-      minHeight: "100%",
-      width: "100%",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "flex-start",
-      rowGap: 5,
-      padding: 20,
-    },
-    myPhoto: {
-      height: "100px",
-      width: "100px",
-      border: "2px solid white",
-      [theme.breakpoints.down("sm")]: {
-        height: "70px",
-        width: "70px",
-      },
-      [theme.breakpoints.down("sm")]: {
-        height: "40px",
-        width: "40px",
-      },
-    },
+
     about: {
       letterSpacing: "normal",
       fontWeight: "300",
@@ -117,16 +101,16 @@ const Project = ({ data, location }) => {
     return (
       <Layout>
         <Seo title={title} description={newText} />
-        <Grid item md={9} xs={12} className={classes.grid}>
-          <Paper variant="outlined" className={classes.paper}>
-            <Typography variant="h2" align="left" style={{ width: "100%" }}>
+        <Grid item md={9} xs={12} sx={gridBanner}>
+          <Paper variant="outlined" sx={paperBanner}>
+            <Typography variant="h2" sx={titleFont}>
               Project {id} - {title}
+              <Divider variant="fullWidth" style={{ width: "100%" }} />
             </Typography>
 
-            <Divider variant="fullWidth" style={{ width: "100%" }} />
-            <Grid container spacing={4} className={classes.smallGrid}>
+            <Grid container spacing={2} className={classes.smallGrid}>
               <Grid item xs={2}>
-                <Avatar className={classes.myPhoto}>
+                <Avatar sx={sideAvatar}>
                   <StaticImage
                     src="../images/MyPhoto.jpg"
                     alt="myPhoto"
@@ -141,12 +125,7 @@ const Project = ({ data, location }) => {
               <Grid item xs={10}>
                 {text.map((item, index) => {
                   return (
-                    <Typography
-                      variant="h3"
-                      className={classes.about}
-                      align="left"
-                      key={index}
-                    >
+                    <Typography variant="h3" sx={descriptionFont} key={index}>
                       {item}
                     </Typography>
                   )

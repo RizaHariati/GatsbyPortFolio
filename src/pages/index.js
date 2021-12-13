@@ -15,38 +15,16 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import { graphql, Link } from "gatsby"
 import { projects } from "../data/data"
 import Seo from "../components/SEO"
+import { gridBanner, paperBanner, cardActions } from "../styles/styles"
+
+const card = {
+  maxWidth: 250,
+  alignItems: "center",
+  margin: "auto",
+  backgroundColor: "transparent",
+}
 const useStyles = makeStyles(theme => {
   return {
-    grid: {
-      height: "100%",
-      [theme.breakpoints]: {
-        height: "85%",
-      },
-    },
-    paper: {
-      height: "fit-content",
-      minHeight: "100%",
-      width: "100%",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "flex-start",
-      padding: 20,
-    },
-    myPhoto: {
-      border: "2px solid white",
-      height: "150px",
-      width: "150px",
-      [theme.breakpoints.down("sm")]: {
-        height: "100px",
-        width: "100px",
-      },
-    },
-    card: {
-      maxWidth: 250,
-      alignItems: "center",
-      margin: "auto",
-    },
     gridcard: {
       paddingInline: 70,
       [theme.breakpoints.down("sm")]: {
@@ -56,14 +34,7 @@ const useStyles = makeStyles(theme => {
         paddingInline: 10,
       },
     },
-    cardActions: {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "flex-start",
-      padding: 10,
-      borderBottom: "0.5px solid gray",
-    },
+
     buttongroup: {
       display: "flex",
       flexDirection: "row",
@@ -99,9 +70,15 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <Seo title="Home" description="welcome to Riza Hariati Portfolio Page" />
-      <Grid item md={9} xs={12} className={classes.grid}>
-        <Paper variant="outlined" className={classes.paper}>
-          <Avatar className={classes.myPhoto}>
+      <Grid item md={9} xs={12} sx={gridBanner}>
+        <Paper variant="outlined" sx={paperBanner}>
+          <Avatar
+            sx={{
+              border: "2px solid white",
+              height: { md: "150px", sm: "100px", xs: "70px" },
+              width: { md: "150px", sm: "100px", xs: "70px" },
+            }}
+          >
             <StaticImage
               src="../images/MyPhoto.jpg"
               alt="riza hariati"
@@ -111,16 +88,31 @@ const Index = ({ data }) => {
               objectPosition="center"
             />
           </Avatar>
-          <Typography variant="h1" className={classes.mainTitle}>
+          <Typography
+            variant="h1"
+            sx={{ fontSize: { xs: "26px", sm: "32px", md: "44px" } }}
+          >
             Hi! I'm Riza Hariati
           </Typography>
-          <Typography variant="h4" color="primary" className={classes.title}>
+          <Typography
+            variant="h4"
+            color="primary"
+            sx={{ fontSize: { xs: "16px", md: "22px" } }}
+          >
             Welcome to my page
           </Typography>
-          <Typography variant="h4" color="primary" className={classes.title}>
+          <Typography
+            variant="h4"
+            color="primary"
+            sx={{ fontSize: { xs: "16px", md: "22px" } }}
+          >
             Here are some of my projects :
           </Typography>
-          <Grid container spacing={2} className={classes.gridcard}>
+          <Grid
+            container
+            spacing={2}
+            sx={{ paddingInline: { md: 2, sm: 1, xs: 0 } }}
+          >
             {projects.map(project => {
               const { id, title, imageLink, url } = project
               const newImage = allImages.find(image => {
@@ -131,9 +123,9 @@ const Index = ({ data }) => {
               const pathToImage = getImage(newImage.gatsbyImageData)
               return (
                 <Grid item md={6} xs={12} key={id}>
-                  <Card className={classes.card} elevation={4}>
+                  <Card sx={card} elevation={2}>
                     <a href={url}>
-                      <CardActionArea className={classes.cardActions}>
+                      <CardActionArea sx={cardActions}>
                         <GatsbyImage
                           image={pathToImage}
                           alt={imageLink}
@@ -142,7 +134,7 @@ const Index = ({ data }) => {
                         />
                       </CardActionArea>
                     </a>
-                    <CardActions className={classes.cardActions}>
+                    <CardActions sx={cardActions}>
                       <Typography variant="button" color="secondary">
                         {title}
                       </Typography>

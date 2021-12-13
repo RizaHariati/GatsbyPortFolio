@@ -1,5 +1,5 @@
-import { pink, blueGrey } from "@mui/material/colors"
-import { createTheme } from "@mui/system"
+import { pink, blueGrey, blue } from "@mui/material/colors"
+import { createTheme } from "@mui/material/styles"
 export const theme = createTheme({
   palette: {
     primary: {
@@ -15,15 +15,8 @@ export const theme = createTheme({
       hover: "#757575",
       hoverOpacity: 0.1,
     },
-
-    background: {
-      default: blueGrey[50],
-    },
   },
-  shadows: Array(25).fill("none"),
-
   typography: {
-    fontFamily: "'Open Sans', sans-serif",
     h1: {
       fontSize: "44px",
       fontWeight: 600,
@@ -35,15 +28,15 @@ export const theme = createTheme({
     },
     h3: {
       fontSize: "24px",
-      fontWeight: 500,
+      fontWeight: 400,
     },
     h4: {
       fontSize: "18px",
-      fontWeight: 500,
+      fontWeight: 400,
     },
     h5: {
       fontSize: "16px",
-      fontWeight: 500,
+      fontWeight: 400,
     },
     h6: {
       fontSize: "12px",

@@ -23,15 +23,6 @@ const useStyles = makeStyles(theme => {
       height: "100vh",
       zIndex: -10,
     },
-    grid: {
-      overflowY: "scroll",
-      scrollbarWidth: "thin",
-      scrollbars: "none",
-      height: "calc(100vh - 40px)",
-      [theme.breakpoints.down("sm")]: {
-        height: "calc(100vh -30px)",
-      },
-    },
   }
 })
 const Layout = ({ children }) => {
@@ -45,7 +36,16 @@ const Layout = ({ children }) => {
         className={classes.gatsbyBackground}
       />
       <Container maxWidth="lg">
-        <Grid container spacing={2} className={classes.grid}>
+        <Grid
+          container
+          spacing={2}
+          sx={{
+            overflowY: "scroll",
+            scrollbarWidth: "thin",
+            scrollbars: "none",
+            height: { md: "calc(100vh - 40px)", xs: "calc(100vh - 30px)" },
+          }}
+        >
           <Navbar />
           {children}
         </Grid>
