@@ -1,0 +1,7 @@
+{
+  "editor.formatOnType": true,
+  "files.autoGuessEncoding": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "javascript.updateImportsOnFileMove.enabled": "always"
+}
