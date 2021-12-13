@@ -114,7 +114,7 @@ const Project = ({ data, location }) => {
     }
     getID()
     // eslint-disable-next-line
-  }, [projectID])
+  }, [location])
   if (myImages.length !== myProject.images.length) return <div></div>
   else {
     const { id, url, title, text } = myProject
