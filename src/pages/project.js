@@ -90,10 +90,11 @@ const Project = ({ data, location }) => {
   const [myProject, setMyProject] = useState(projects[0])
   const [myImages, setMyImages] = useState([])
   const classes = useStyles()
-  const projectID = location.state.myProp
+
   const allImages = data.allImageSharp.nodes
   useEffect(() => {
     const getID = async () => {
+      const projectID = await location.state.myProp
       setMyImages([])
       const newProject = await projects.find(
         project => project.id === projectID
