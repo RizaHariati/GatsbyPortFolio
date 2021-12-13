@@ -1,9 +1,9 @@
 import React from "react"
 
-import { Divider, Grid, makeStyles, Paper, Typography } from "@material-ui/core"
+import { Divider, Grid, Paper, Typography } from "@mui/material"
 import Layout from "../components/Layout"
 import Seo from "../components/SEO"
-
+import { makeStyles } from "@mui/styles"
 const useStyles = makeStyles(theme => {
   return {
     grid: {
@@ -36,7 +36,7 @@ const Error = () => {
     <Layout>
       <Seo title="error" />
       <Grid item md={9} xs={12} className={classes.grid}>
-        <Paper variant="outlined" className={classes.paper}>
+        <Paper className={classes.paper}>
           <Typography variant="h2" align="left" style={{ width: "100%" }}>
             PAGE NOT FOUND
           </Typography>

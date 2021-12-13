@@ -1,5 +1,6 @@
-import { makeStyles, Typography, Button, Divider } from "@material-ui/core"
-import { Apartment, Home, PersonRounded } from "@material-ui/icons"
+import { Typography, Button, Divider } from "@mui/material"
+import { makeStyles } from "@mui/styles"
+import { Apartment, Home, PersonRounded } from "@mui/icons-material"
 import { Link } from "gatsby"
 import React, { useState } from "react"
 import DropMenu from "./DropMenu"

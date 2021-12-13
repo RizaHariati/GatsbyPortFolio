@@ -1,13 +1,8 @@
 import React from "react"
-import {
-  makeStyles,
-  Typography,
-  Button,
-  Collapse,
-  Divider,
-} from "@material-ui/core"
+import { Typography, Button, Collapse, Divider } from "@mui/material"
+import { makeStyles } from "@mui/styles"
 import { projects } from "../data/data"
-import { DoubleArrow } from "@material-ui/icons"
+import { DoubleArrow } from "@mui/icons-material"
 import { Link } from "gatsby"
 
 const useStyles = makeStyles(theme => {
@@ -31,7 +26,7 @@ const DropMenu = ({ open, setOpen }) => {
   const classes = useStyles()
   return (
     <div role="textbox" onMouseLeave={() => setOpen(false)} tabIndex={0}>
-      <Collapse in={open} className={classes.collapse}>
+      <Collapse in={open}>
         {projects.map(project => {
           const { id, title } = project
           return (

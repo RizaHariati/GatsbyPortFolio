@@ -1,12 +1,7 @@
-import {
-  Grid,
-  makeStyles,
-  Paper,
-  Typography,
-  IconButton,
-  Collapse,
-} from "@material-ui/core"
-import { Apps } from "@material-ui/icons"
+import { Grid, Typography, IconButton, Collapse } from "@mui/material"
+import { Paper } from "@mui/material"
+import { makeStyles } from "@mui/styles"
+import { Apps } from "@mui/icons-material"
 import React, { useState } from "react"
 import ListMenu from "./ListMenu"
 import Social from "./Social"
@@ -89,7 +84,7 @@ const Navbar = () => {
         </Paper>
       </Grid>
       <Grid item md={3} xs={12} className={classes.dropMenu}>
-        <Collapse in={openList} style={{ width: "100%" }}>
+        <Collapse in={openList}>
           <Paper variant="outlined" className={classes.paper}>
             <ListMenu />
           </Paper>

@@ -24,28 +24,3 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-
-.mainBackground {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  padding-top: 30px;
-}
-.gatsbyBackground {
-  position: absolute;
-  top: 0px;
-  bottom: auto;
-  left: 0px;
-  width: 100vw;
-  height: 100vh;
-  z-index: -10;
-}
-.grid {
-  overflow-y: scroll;
-  scrollbar-width: thin;
-  height: calc(100vh - 40px);
-}
-
-//  [theme.breakpoints.down("sm")]: {
-//     height: "calc(100vh -30px)",
-//   },

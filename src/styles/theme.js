@@ -1,6 +1,5 @@
-import { createTheme } from "@material-ui/core"
-import { blueGrey, pink } from "@material-ui/core/colors"
-
+import { pink, blueGrey } from "@mui/material/colors"
+import { createTheme } from "@mui/system"
 export const theme = createTheme({
   palette: {
     primary: {
@@ -19,9 +18,10 @@ export const theme = createTheme({
 
     background: {
       default: blueGrey[50],
-      paper: "#",
     },
   },
+  shadows: Array(25).fill("none"),
+
   typography: {
     fontFamily: "'Open Sans', sans-serif",
     h1: {

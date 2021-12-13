@@ -1,7 +1,7 @@
-import { Container, Grid, makeStyles } from "@material-ui/core"
+import { Container, Grid } from "@mui/material"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
-
+import { makeStyles } from "@mui/styles"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 import "../styles/styles.css"

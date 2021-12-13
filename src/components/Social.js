@@ -1,7 +1,7 @@
-import { makeStyles, Typography, Avatar } from "@material-ui/core"
+import { Typography, Avatar } from "@mui/material"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
-
+import { makeStyles } from "@mui/styles"
 const useStyles = makeStyles(theme => {
   return {
     socialContainer: {

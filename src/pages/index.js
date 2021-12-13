@@ -6,10 +6,10 @@ import {
   CardActionArea,
   CardActions,
   Grid,
-  makeStyles,
   Paper,
   Typography,
-} from "@material-ui/core"
+} from "@mui/material"
+import { makeStyles } from "@mui/styles"
 import Layout from "../components/Layout"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import { graphql, Link } from "gatsby"
@@ -19,8 +19,7 @@ const useStyles = makeStyles(theme => {
   return {
     grid: {
       height: "100%",
-
-      [theme.breakpoints.down("sm")]: {
+      [theme.breakpoints]: {
         height: "85%",
       },
     },

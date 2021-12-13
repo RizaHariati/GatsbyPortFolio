@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from "react"
 
-import {
-  Avatar,
-  Divider,
-  Grid,
-  makeStyles,
-  Paper,
-  Typography,
-} from "@material-ui/core"
+import { Avatar, Divider, Grid, Paper, Typography } from "@mui/material"
+import { makeStyles } from "@mui/styles"
 import { projects } from "../data/data"
 import Layout from "../components/Layout"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"

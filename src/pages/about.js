@@ -1,12 +1,6 @@
 import React from "react"
-import {
-  Avatar,
-  Divider,
-  Grid,
-  makeStyles,
-  Paper,
-  Typography,
-} from "@material-ui/core"
+import { Avatar, Divider, Grid, Paper, Typography } from "@mui/material"
+import { makeStyles } from "@mui/styles"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import { aboutData } from "../data/data"
