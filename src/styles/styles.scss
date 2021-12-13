@@ -27,9 +27,25 @@
 
 .mainBackground {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  padding: 20px;
-  background-color: var(--clr-1-opacity);
-  mix-blend-mode: hard-light;
+  padding-top: 30px;
 }
+.gatsbyBackground {
+  position: absolute;
+  top: 0px;
+  bottom: auto;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+}
+.grid {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  height: calc(100vh - 40px);
+}
+
+//  [theme.breakpoints.down("sm")]: {
+//     height: "calc(100vh -30px)",
+//   },

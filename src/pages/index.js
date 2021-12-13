@@ -93,7 +93,7 @@ const useStyles = makeStyles(theme => {
   }
 })
 
-const Home = ({ data }) => {
+const Index = ({ data }) => {
   const classes = useStyles()
   const allImages = data.allImageSharp.nodes
 
@@ -182,7 +182,7 @@ const Home = ({ data }) => {
   )
 }
 
-export default Home
+export default Index
 
 export const result = graphql`
   query getAllImage {
