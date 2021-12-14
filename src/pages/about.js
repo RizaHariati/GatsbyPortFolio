@@ -54,7 +54,7 @@ const About = () => {
               {aboutData.map(data => {
                 const { id, title, tools } = data
                 return (
-                  <Grid container key={id}>
+                  <Grid container key={id} sx={{ marginBottom: 2 }}>
                     <Grid item xs={12}>
                       <Typography variant="h3">{title}</Typography>
                     </Grid>
@@ -62,7 +62,7 @@ const About = () => {
                     <Grid container spacing={0}>
                       {tools.map((tool, index) => {
                         return (
-                          <Grid item md={3} sm={4} xs={6} key={index}>
+                          <Grid item md={4} xs={6} key={index}>
                             <Typography variant="body1" sx={descriptionFont}>
                               {tool}
                             </Typography>

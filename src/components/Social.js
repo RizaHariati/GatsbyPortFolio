@@ -1,37 +1,13 @@
 import { Typography, Avatar } from "@mui/material"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
-import { makeStyles } from "@mui/styles"
-
-const social = {
-  background: "transparent",
-  width: 40,
-  height: 40,
-}
-const useStyles = makeStyles(theme => {
-  return {
-    socialContainer: {
-      display: "flex",
-      flexDirection: "column",
-      rowGap: 10,
-      [theme.breakpoints.down("md")]: {
-        display: "none",
-      },
-    },
-    socials: {
-      width: "100%",
-      display: "flex",
-      flexDirection: "row",
-      columnGap: theme.spacing(2),
-    },
-  }
-})
+import "../styles/styles.css"
+import { social } from "../styles/styles"
 
 const Social = () => {
-  const classes = useStyles()
   return (
-    <div className={classes.socialContainer}>
-      <div className={classes.socials}>
+    <div className="socialContainer">
+      <div className="socials">
         <a className="social-btn" href="https://github.com/RizaHariati">
           <Avatar variant="square" sx={social}>
             <StaticImage src="../images/github.svg" alt="github" />
@@ -43,7 +19,7 @@ const Social = () => {
           </Avatar>
         </a>
         <a href="https://www.linkedin.com/in/riza-hariati-2021/">
-          <Avatar variant="square" sx={social} s>
+          <Avatar variant="square" sx={social}>
             <StaticImage src="../images/linkedin.svg" alt="linkedin" />
           </Avatar>
         </a>

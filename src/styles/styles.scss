@@ -29,6 +29,9 @@ a {
 }
 .showOnLarge {
   width: 100%;
+
+  align-items: center;
+  margin-inline: auto;
   display: block;
 }
 
@@ -37,8 +40,48 @@ a {
   margin: auto;
   text-align: center;
 }
+
+.mainBackground {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 30px;
+}
+.gatsbyBackground {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+}
+.showOnSmall {
+  display: none;
+}
+
+.socialContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+}
+
+.socials {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
 @media screen and (max-width: 900px) {
   .showOnLarge {
     display: none;
+  }
+  .showOnSmall {
+    display: block;
   }
 }

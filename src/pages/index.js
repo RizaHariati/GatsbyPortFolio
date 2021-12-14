@@ -10,7 +10,7 @@ import {
   Paper,
   Typography,
 } from "@mui/material"
-import { makeStyles } from "@mui/styles"
+
 import Layout from "../components/Layout"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import { graphql, Link } from "gatsby"
@@ -51,7 +51,7 @@ const Index = ({ data }) => {
           </Avatar>
           <Typography
             variant="h1"
-            sx={{ fontSize: { xs: "26px", sm: "32px", md: "44px" } }}
+            sx={{ fontSize: { xs: "26px", sm: "32px", md: "40px" } }}
           >
             Hi! I'm Riza Hariati
           </Typography>

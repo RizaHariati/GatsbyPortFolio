@@ -4,7 +4,7 @@ import { Apps } from "@mui/icons-material"
 import React, { useState } from "react"
 import ListMenu from "./ListMenu"
 import Social from "./Social"
-import { paper } from "../styles/styles"
+import { paperSocial, paper } from "../styles/styles"
 import "../styles/styles.css"
 
 const Navbar = () => {
@@ -26,7 +26,9 @@ const Navbar = () => {
           <div className="showOnLarge">
             <ListMenu />
           </div>
-          <Social />
+          <div className="showOnLarge">
+            <Social />
+          </div>
           <IconButton
             variant="square"
             sx={{
@@ -51,8 +53,9 @@ const Navbar = () => {
         }}
       >
         <Collapse in={openList} sx={{ width: "100%" }}>
-          <Paper variant="outlined" sx={paper}>
+          <Paper variant="outlined" sx={paperSocial}>
             <ListMenu />
+            <Social />
           </Paper>
         </Collapse>
       </Grid>

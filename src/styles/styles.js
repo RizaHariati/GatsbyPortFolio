@@ -9,6 +9,18 @@ const paper = {
   padding: 2,
   paddingInline: { md: 0, sm: 2, xs: 1 },
 }
+const paperSocial = {
+  height: "fit-content",
+  width: "100%",
+  display: "flex",
+  flexDirection: "column",
+  backgroundColor: "transparent",
+  alignItems: "center",
+  justifyContent: "space-between",
+  rowGap: 4,
+  padding: 2,
+  paddingInline: { md: 0, sm: 2, xs: 1 },
+}
 
 const gridBanner = {
   width: "100%",
@@ -49,6 +61,7 @@ const titleFont = {
 }
 const descriptionFont = {
   fontSize: { xs: "16px", md: "18px" },
+  letterSpacing: { xs: "0px", md: "0.5px" },
   align: "left",
 }
 const imageGrid = {
@@ -63,6 +76,19 @@ const smallGrid = {
   width: "100%",
   paddingInline: { md: 5, sm: 2, xs: 0 },
 }
+const subMenuBtnContainer = {
+  width: "100%",
+}
+const subMenuBtn = {
+  fontSize: { xs: "16px", sm: "18px", md: "16px" },
+  width: "100%",
+  align: "left",
+}
+const social = {
+  background: "transparent",
+  width: 40,
+  height: 40,
+}
 export {
   paper,
   descriptionFont,
@@ -74,4 +100,8 @@ export {
   fullDivider,
   imageGrid,
   smallGrid,
+  subMenuBtnContainer,
+  subMenuBtn,
+  paperSocial,
+  social,
 }
