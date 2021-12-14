@@ -1,17 +1,37 @@
 import { Container, Grid } from "@mui/material"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
+import { makeStyles } from "@mui/styles"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 import "../styles/styles.css"
 
+const useStyles = makeStyles({
+  mainBackground: {
+    position: "relative",
+    width: "100vw",
+    height: "100vh",
+    paddingTop: 30,
+  },
+  gatsbyBackground: {
+    position: "absolute",
+    top: 0,
+    bottom: "auto",
+    left: 0,
+    width: "100vw",
+    height: "100vh",
+    zIndex: -10,
+  },
+})
 const Layout = ({ children }) => {
+  const classes = useStyles()
+
   return (
-    <div className="mainBackground">
+    <div className={classes.mainBackground}>
       <StaticImage
         src="../images/background.jpg"
         alt="background"
-        className="gatsbyBackground"
+        className={classes.gatsbyBackground}
       />
       <Container maxWidth="lg">
         <Grid
