@@ -1,24 +1,13 @@
-import { Grid, Typography, IconButton, Collapse } from "@mui/material"
-import { Paper } from "@mui/material"
-import { makeStyles } from "@mui/styles"
+import { Grid, Typography, IconButton, Collapse, Paper } from "@mui/material"
+
 import { Apps } from "@mui/icons-material"
 import React, { useState } from "react"
 import ListMenu from "./ListMenu"
 import Social from "./Social"
 import { paper } from "../styles/styles"
-const useStyles = makeStyles(theme => {
-  return {
-    mainlinks: {
-      width: "100%",
-      [theme.breakpoints.down("md")]: {
-        display: "none",
-      },
-    },
-  }
-})
+import "../styles/styles.css"
 
 const Navbar = () => {
-  const classes = useStyles()
   const [openList, setOpenList] = useState(false)
   return (
     <>
@@ -34,7 +23,7 @@ const Navbar = () => {
           <Typography variant="h2" color="secondary">
             <span style={{ color: "black" }}>Azri</span>Coding
           </Typography>
-          <div className={classes.mainlinks}>
+          <div className="showOnLarge">
             <ListMenu />
           </div>
           <Social />

@@ -1,6 +1,5 @@
 import React from "react"
 import { Avatar, Divider, Grid, Paper, Typography } from "@mui/material"
-import { makeStyles } from "@mui/styles"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import { aboutData } from "../data/data"
@@ -11,6 +10,7 @@ import {
   gridBanner,
   titleFont,
   descriptionFont,
+  fullDivider,
 } from "../styles/styles"
 
 const smallGrid = {
@@ -18,26 +18,7 @@ const smallGrid = {
   paddingInline: { xs: 0, sm: 2, md: 4 },
 }
 
-const useStyles = makeStyles(theme => {
-  return {
-    about: {
-      letterSpacing: "normal",
-      fontWeight: "300",
-      width: "100%",
-      fontSize: "20px",
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "18px",
-      },
-      [theme.breakpoints.down("xs")]: {
-        fontSize: "16px",
-      },
-    },
-  }
-})
-
 const About = () => {
-  const classes = useStyles()
-
   return (
     <Layout>
       <Seo title="About" />
@@ -47,8 +28,8 @@ const About = () => {
             About
           </Typography>
 
-          <Divider variant="fullWidth" style={{ width: "100%" }} />
-          <Grid container spacing={4} sx={smallGrid}>
+          <Divider variant="fullWidth" sx={fullDivider} />
+          <Grid container spacing={1} sx={smallGrid}>
             <Grid item xs={2}>
               <Avatar sx={sideAvatar}>
                 <StaticImage
@@ -68,28 +49,31 @@ const About = () => {
                 learned so far.
               </Typography>
             </Grid>
-            {aboutData.map(data => {
-              const { id, title, tools } = data
-              return (
-                <Grid container spacing={1} key={id}>
-                  <Grid item xs={12}>
-                    <Typography variant="h3">{title}</Typography>
+            <Divider variant="fullWidth" sx={fullDivider} />
+            <Grid item xs={12}>
+              {aboutData.map(data => {
+                const { id, title, tools } = data
+                return (
+                  <Grid container key={id}>
+                    <Grid item xs={12}>
+                      <Typography variant="h3">{title}</Typography>
+                    </Grid>
+                    <Divider variant="fullWidth" sx={fullDivider} />
+                    <Grid container spacing={0}>
+                      {tools.map((tool, index) => {
+                        return (
+                          <Grid item md={3} sm={4} xs={6} key={index}>
+                            <Typography variant="body1" sx={descriptionFont}>
+                              {tool}
+                            </Typography>
+                          </Grid>
+                        )
+                      })}
+                    </Grid>
                   </Grid>
-                  <Divider variant="fullWidth" style={{ width: "100%" }} />
-                  <Grid container spacing={0}>
-                    {tools.map((tool, index) => {
-                      return (
-                        <Grid item md={3} sm={4} xs={6} key={index}>
-                          <Typography variant="body1" sx={descriptionFont}>
-                            {tool}
-                          </Typography>
-                        </Grid>
-                      )
-                    })}
-                  </Grid>
-                </Grid>
-              )
-            })}
+                )
+              })}
+            </Grid>
           </Grid>
         </Paper>
       </Grid>

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
 :root {
-  --clr-1-opacity: #0f425d10;
+  --clr-1-opacity: #0f425d65;
   --clr-1: #0c2a3a;
   --clr-1-opacity: #083147;
   --clr-1-opacity-2: #0c2a3ad7;
@@ -22,7 +22,28 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   text-decoration: none;
+}
+
+a {
+  color: black;
+}
+
+.showOnLarge {
+  width: 100%;
+  display: block;
+}
+
+.webImage {
+  border-radius: 0.3rem;
+  margin: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .showOnLarge {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

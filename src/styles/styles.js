@@ -14,7 +14,7 @@ const gridBanner = {
   width: "100%",
   height: { md: "100%", sm: "85%", xs: "85%" },
 }
-
+const fullDivider = { width: "100%", marginBlock: 2 }
 const paperBanner = {
   height: "fit-content",
   minHeight: "calc(100vh - 60px)",
@@ -24,8 +24,8 @@ const paperBanner = {
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "flex-start",
-  paddingTop: 1,
-  gInline: { md: 5, sm: 2, xs: 1 },
+  padding: { md: 2, sm: 1, xs: 1 },
+  paddingInline: { md: 3, sm: 2, xs: 1 },
 }
 const cardActions = {
   display: "flex",
@@ -51,6 +51,18 @@ const descriptionFont = {
   fontSize: { xs: "16px", md: "18px" },
   align: "left",
 }
+const imageGrid = {
+  width: "100%",
+  margin: "auto",
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  paddingInline: { md: 5, sm: 2, xs: 0 },
+}
+const smallGrid = {
+  width: "100%",
+  paddingInline: { md: 5, sm: 2, xs: 0 },
+}
 export {
   paper,
   descriptionFont,
@@ -59,4 +71,7 @@ export {
   cardActions,
   sideAvatar,
   titleFont,
+  fullDivider,
+  imageGrid,
+  smallGrid,
 }

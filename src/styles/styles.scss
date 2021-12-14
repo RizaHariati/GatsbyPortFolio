@@ -24,3 +24,21 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+a {
+  color: black;
+}
+.showOnLarge {
+  width: 100%;
+  display: block;
+}
+
+.webImage {
+  border-radius: 0.3rem;
+  margin: auto;
+  text-align: center;
+}
+@media screen and (max-width: 900px) {
+  .showOnLarge {
+    display: none;
+  }
+}

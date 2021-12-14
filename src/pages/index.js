@@ -2,6 +2,7 @@ import React from "react"
 import {
   Avatar,
   Button,
+  ButtonGroup,
   Card,
   CardActionArea,
   CardActions,
@@ -23,48 +24,8 @@ const card = {
   margin: "auto",
   backgroundColor: "transparent",
 }
-const useStyles = makeStyles(theme => {
-  return {
-    gridcard: {
-      paddingInline: 70,
-      [theme.breakpoints.down("sm")]: {
-        paddingInline: 20,
-      },
-      [theme.breakpoints.down("xs")]: {
-        paddingInline: 10,
-      },
-    },
-
-    buttongroup: {
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "center",
-      columnGap: 10,
-    },
-    image: {
-      margin: "auto",
-    },
-    mainTitle: {
-      [theme.breakpoints.down("xs")]: {
-        fontSize: "25px",
-      },
-    },
-    title: {
-      [theme.breakpoints.down("xs")]: {
-        fontSize: "14px",
-      },
-    },
-    button: {
-      [theme.breakpoints.down("xs")]: {
-        fontSize: "12px",
-      },
-    },
-  }
-})
 
 const Index = ({ data }) => {
-  const classes = useStyles()
   const allImages = data.allImageSharp.nodes
 
   return (
@@ -130,7 +91,7 @@ const Index = ({ data }) => {
                           image={pathToImage}
                           alt={imageLink}
                           height={120}
-                          className={classes.image}
+                          style={{ margin: "auto" }}
                         />
                       </CardActionArea>
                     </a>
@@ -139,28 +100,17 @@ const Index = ({ data }) => {
                         {title}
                       </Typography>
 
-                      <div className={classes.buttongroup}>
-                        <a href={url}>
-                          <Button
-                            variant="outlined"
-                            size="small"
-                            color="primary"
-                            className={classes.button}
-                          >
-                            visit website
-                          </Button>
-                        </a>
-                        <Link to="/project/" state={{ myProp: id }}>
-                          <Button
-                            variant="outlined"
-                            size="small"
-                            color="primary"
-                            className={classes.button}
-                          >
+                      <ButtonGroup>
+                        <Button variant="outlined" size="small" color="primary">
+                          <a href={url}>visit website</a>
+                        </Button>
+
+                        <Button variant="outlined" size="small" color="primary">
+                          <Link to="/project/" state={{ myProp: id }}>
                             Read more
-                          </Button>
-                        </Link>
-                      </div>
+                          </Link>
+                        </Button>
+                      </ButtonGroup>
                     </CardActions>
                   </Card>
                 </Grid>

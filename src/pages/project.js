@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 
 import { Avatar, Divider, Grid, Paper, Typography } from "@mui/material"
-import { makeStyles } from "@mui/styles"
+
 import { projects } from "../data/data"
 import Layout from "../components/Layout"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
@@ -13,61 +13,15 @@ import {
   gridBanner,
   titleFont,
   descriptionFont,
+  fullDivider,
+  imageGrid,
+  smallGrid,
 } from "../styles/styles"
-
-const useStyles = makeStyles(theme => {
-  return {
-    grid: {
-      height: "100%",
-      width: "100%",
-      [theme.breakpoints.down("sm")]: {
-        height: "85%",
-        width: "100%",
-      },
-    },
-
-    about: {
-      letterSpacing: "normal",
-      fontWeight: "300",
-      width: "100%",
-      fontSize: "20px",
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "18px",
-      },
-      [theme.breakpoints.down("xs")]: {
-        fontSize: "16px",
-      },
-    },
-    imageGrid: {
-      width: "100%",
-      margin: "auto",
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "center",
-    },
-    image: {
-      width: "fit-content",
-      margin: "auto",
-      borderRadius: theme.shape.borderRadius,
-    },
-    smallGrid: {
-      width: "100%",
-      paddingInline: 20,
-
-      [theme.breakpoints.down("sm")]: {
-        paddingInline: 10,
-      },
-      [theme.breakpoints.down("xs")]: {
-        paddingInline: 0,
-      },
-    },
-  }
-})
+import "../styles/styles.css"
 
 const Project = ({ data, location }) => {
   const [myProject, setMyProject] = useState(projects[0])
   const [myImages, setMyImages] = useState([])
-  const classes = useStyles()
 
   const allImages = data.allImageSharp.nodes
   useEffect(() => {
@@ -105,10 +59,10 @@ const Project = ({ data, location }) => {
           <Paper variant="outlined" sx={paperBanner}>
             <Typography variant="h2" sx={titleFont}>
               Project {id} - {title}
-              <Divider variant="fullWidth" style={{ width: "100%" }} />
+              <Divider variant="fullWidth" sx={fullDivider} />
             </Typography>
 
-            <Grid container spacing={2} className={classes.smallGrid}>
+            <Grid container spacing={2} sx={smallGrid}>
               <Grid item xs={2}>
                 <Avatar sx={sideAvatar}>
                   <StaticImage
@@ -137,29 +91,32 @@ const Project = ({ data, location }) => {
                 </a>
               </Grid>
 
-              <Divider variant="fullWidth" style={{ width: "100%" }} />
-
-              {myImages.map((image, index) => {
-                const pathToImage = getImage(image.gatsbyImageData)
-                return (
-                  <Grid
-                    item
-                    md={4}
-                    sm={6}
-                    xs={12}
-                    key={index}
-                    className={classes.imageGrid}
-                  >
-                    <GatsbyImage
-                      image={pathToImage}
-                      alt={title}
-                      className={classes.image}
-                      objectFit="cover"
-                      objectPosition="center"
-                    />
-                  </Grid>
-                )
-              })}
+              <Divider variant="fullWidth" sx={fullDivider} />
+              <Grid item xs={12}>
+                <Grid container spacing={2} sx={imageGrid}>
+                  {myImages.map((image, index) => {
+                    const pathToImage = getImage(image.gatsbyImageData)
+                    return (
+                      <Grid
+                        item
+                        md={4}
+                        sm={12}
+                        xs={12}
+                        key={index}
+                        sx={{ width: "100%", display: "flex" }}
+                      >
+                        <GatsbyImage
+                          image={pathToImage}
+                          alt={title}
+                          objectFit="cover"
+                          objectPosition="center"
+                          className="webImage"
+                        />
+                      </Grid>
+                    )
+                  })}
+                </Grid>
+              </Grid>
             </Grid>
           </Paper>
         </Grid>
