@@ -78,6 +78,7 @@ const smallGrid = {
 }
 const subMenuBtnContainer = {
   width: "100%",
+  height: "50px",
 }
 const subMenuBtn = {
   fontSize: { xs: "16px", sm: "18px", md: "16px" },
