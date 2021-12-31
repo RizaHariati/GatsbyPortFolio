@@ -24,6 +24,18 @@ const projects = [
     ],
     images: ["azribook-website", "azribook-tablet", "azribook-phone"],
   },
+  {
+    id: "azri003",
+    url: "https://pancakepluspasta.netlify.app/",
+    type: "Website",
+    title: "Pancake plus Pasta",
+    imageLink: "Web3",
+    text: [
+      "A simple e-commerce website using Gatsby JS with the support of Contentful to manage the website's content which later accessed using GraphQL ",
+      "Since the website is very simple I chose to use useContext and useReducer instead of Redux",
+    ],
+    images: ["P3-website", "P3-tablet", "P3-phone"],
+  },
 ]
 
 const aboutData = [
