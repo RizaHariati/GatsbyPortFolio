@@ -22,6 +22,10 @@ const Seo = ({ title, description }) => {
       title={`${title} | AzriCoding`}
       meta={[
         { name: `description`, content: description || metaData.description },
+        {
+          name: `google-site-verification`,
+          content: "ToQHHEWK48t95I0a2-VCdlbdgY7joocmPhmLPMS2KUw",
+        },
       ]}
     ></Helmet>
   )
