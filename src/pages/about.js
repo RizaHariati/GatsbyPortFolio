@@ -43,7 +43,7 @@ const About = () => {
               </Avatar>
             </Grid>
             <Grid item xs={10}>
-              <Typography variant="h3" sx={descriptionFont}>
+              <Typography variant="h4" sx={descriptionFont}>
                 It was June 2020 when I first decided to start learning
                 programming and this website is dedicated to show you what I've
                 learned so far.
@@ -54,7 +54,7 @@ const About = () => {
               {aboutData.map(data => {
                 const { id, title, tools } = data
                 return (
-                  <Grid container key={id} sx={{ marginBottom: 2 }}>
+                  <Grid container key={id} sx={{ marginBottom: 1 }}>
                     <Grid item xs={12}>
                       <Typography variant="h3">{title}</Typography>
                     </Grid>

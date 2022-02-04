@@ -72,7 +72,10 @@ const Index = ({ data }) => {
           <Grid
             container
             spacing={2}
-            sx={{ paddingInline: { md: 2, sm: 1, xs: 0 } }}
+            sx={{
+              paddingInline: { md: 2, sm: 1, xs: 0 },
+              marginBottom: { md: 0, xs: "200px" },
+            }}
           >
             {projects.map(project => {
               const { id, title, imageLink, url } = project

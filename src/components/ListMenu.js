@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => {
   return {
     button: {
       width: "100%",
-      height: 50,
+      height: { xs: 30, md: 40 },
     },
 
     buttonMenu: {
@@ -40,7 +40,7 @@ const ListMenu = () => {
         startIcon={<Apartment />}
         color="primary"
         className={classes.button}
-        onMouseEnter={() => setOpen(true)}
+        onClick={() => setOpen(!open)}
       >
         <Typography variant="h4" color="primary">
           Project

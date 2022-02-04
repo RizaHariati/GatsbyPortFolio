@@ -79,7 +79,7 @@ const Project = ({ data, location }) => {
               <Grid item xs={10}>
                 {text.map((item, index) => {
                   return (
-                    <Typography variant="h3" sx={descriptionFont} key={index}>
+                    <Typography variant="h4" sx={descriptionFont} key={index}>
                       {item}
                     </Typography>
                   )

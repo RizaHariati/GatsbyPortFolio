@@ -16,11 +16,11 @@ const Navbar = () => {
         md={3}
         xs={12}
         sx={{
-          height: { md: "100%", sm: "15%", xs: "15%" },
+          height: { md: "100%", sm: "13%", xs: "13%" },
         }}
       >
         <Paper variant="outlined" sx={paper}>
-          <Typography variant="h2" color="secondary">
+          <Typography variant="h3" color="secondary">
             <span style={{ color: "black" }}>Azri</span>Coding
           </Typography>
           <div className="showOnLarge">

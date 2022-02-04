@@ -80,7 +80,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  row-gap: 10px;
+  row-gap: 5px;
 }
 
 .socials {

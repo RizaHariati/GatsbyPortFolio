@@ -7,7 +7,7 @@ const paper = {
   alignItems: "center",
   justifyContent: "space-between",
   padding: 2,
-  paddingInline: { md: 0, sm: 2, xs: 1 },
+  paddingInline: { md: 0, sm: 1, xs: 1 },
 }
 const paperSocial = {
   height: "fit-content",
@@ -18,18 +18,19 @@ const paperSocial = {
   alignItems: "center",
   justifyContent: "space-between",
   rowGap: 4,
-  padding: 2,
-  paddingInline: { md: 0, sm: 2, xs: 1 },
+  padding: 1,
+  paddingInline: { md: 0, sm: 1, xs: 0 },
 }
 
 const gridBanner = {
   width: "100%",
-  height: { md: "100%", sm: "85%", xs: "85%" },
+  height: { md: "100%", sm: "87%", xs: "87%" },
 }
-const fullDivider = { width: "100%", marginBlock: 2 }
+const fullDivider = { width: "100%", marginBlock: 1 }
 const paperBanner = {
-  height: "fit-content",
-  minHeight: "calc(100vh - 60px)",
+  // height: "fit-content",
+  height: "calc(100vh - 60px)",
+  overflowY: "scroll",
   width: "100%",
   display: "flex",
   backgroundColor: "transparent",
@@ -37,7 +38,7 @@ const paperBanner = {
   alignItems: "center",
   justifyContent: "flex-start",
   padding: { md: 2, sm: 1, xs: 1 },
-  paddingInline: { md: 3, sm: 2, xs: 1 },
+  paddingInline: { md: 3, sm: 1, xs: 1 },
 }
 const cardActions = {
   display: "flex",
@@ -60,13 +61,14 @@ const titleFont = {
   align: "left",
 }
 const descriptionFont = {
-  fontSize: { xs: "16px", md: "18px" },
+  fontSize: { xs: "14px", md: "16px" },
   letterSpacing: { xs: "0px", md: "0.5px" },
   align: "left",
 }
 const imageGrid = {
   width: "100%",
   margin: "auto",
+  marginBottom: { md: 0, xs: "300px" },
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -74,22 +76,23 @@ const imageGrid = {
 }
 const smallGrid = {
   width: "100%",
-  paddingInline: { md: 5, sm: 2, xs: 0 },
+  paddingInline: { md: 5, sm: 1, xs: 0 },
 }
 const subMenuBtnContainer = {
   width: "100%",
-  height: "50px",
+  height: "40px",
 }
 const subMenuBtn = {
-  fontSize: { xs: "16px", sm: "18px", md: "16px" },
+  fontSize: { xs: "14px", sm: "16px", md: "14px" },
   width: "100%",
   align: "left",
 }
 const social = {
   background: "transparent",
-  width: 40,
-  height: 40,
+  width: { xs: 25, md: 30 },
+  height: { xs: 25, md: 30 },
 }
+
 export {
   paper,
   descriptionFont,

@@ -11,6 +11,7 @@ const useStyles = makeStyles({
     position: "relative",
     width: "100vw",
     height: "100vh",
+    overflow: "hidden",
     paddingTop: 30,
   },
   gatsbyBackground: {
@@ -19,7 +20,8 @@ const useStyles = makeStyles({
     bottom: "auto",
     left: 0,
     width: "100vw",
-    height: "100vh",
+    height: "160vh",
+    overflow: "hidden",
     zIndex: -10,
   },
 })
@@ -36,12 +38,13 @@ const Layout = ({ children }) => {
       <Container maxWidth="lg">
         <Grid
           container
-          spacing={2}
+          spacing={{ md: 2, xs: 1 }}
           sx={{
-            overflowY: "scroll",
+            // overflowY: "scroll",
+
             scrollbarWidth: "thin",
             scrollbars: "none",
-            height: { md: "calc(100vh - 40px)", xs: "calc(100vh - 30px)" },
+            height: { md: "calc(100vh - 45px)", xs: "calc(100vh - 30px)" },
           }}
         >
           <Navbar />

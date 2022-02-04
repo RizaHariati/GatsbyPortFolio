@@ -7,9 +7,17 @@ const Footer = () => {
     <Drawer anchor="bottom" open={true} variant="persistent">
       <a
         href="http://www.freepik.com"
-        style={{ maxWidth: "1280px", width: "95%" }}
+        style={{
+          maxWidth: "1280px",
+          width: "95%",
+        }}
       >
-        <Typography variant="body2" color="primary" align="right">
+        <Typography
+          variant="body2"
+          // color="primary"
+
+          align="right"
+        >
           Designed by pikisuperstar / Freepik
         </Typography>
       </a>

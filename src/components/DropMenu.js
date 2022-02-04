@@ -1,14 +1,14 @@
 import React from "react"
-import { Typography, Button, Collapse, Divider } from "@mui/material"
+import { Typography, Button, Collapse, Divider, TextField } from "@mui/material"
 import { projects } from "../data/data"
-import { DoubleArrow } from "@mui/icons-material"
+import { CheckCircleOutline } from "@mui/icons-material"
 import { Link } from "gatsby"
 import { subMenuBtn, subMenuBtnContainer } from "../styles/styles"
 import "../styles/styles.css"
 
 const DropMenu = ({ open, setOpen }) => {
   return (
-    <div role="textbox" onMouseLeave={() => setOpen(false)} tabIndex={0}>
+    <div onClick={() => setOpen(!open)} tabIndex={0}>
       <Collapse in={open}>
         {projects.map(project => {
           const { id, title } = project
@@ -17,7 +17,7 @@ const DropMenu = ({ open, setOpen }) => {
               <Divider variant="fullWidth" />
               <Link to="/project/" state={{ myProp: id }}>
                 <Button
-                  startIcon={<DoubleArrow />}
+                  startIcon={<CheckCircleOutline />}
                   color="primary"
                   sx={subMenuBtnContainer}
                 >
