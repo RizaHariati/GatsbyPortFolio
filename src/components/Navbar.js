@@ -21,7 +21,7 @@ const Navbar = () => {
       >
         <Paper variant="outlined" sx={paper}>
           <Typography variant="h3" color="secondary">
-            <span style={{ color: "black" }}>Azri</span>Coding
+            <span style={{ color: "#757575" }}>Azri</span>Coding
           </Typography>
           <div className="showOnLarge">
             <ListMenu />
@@ -36,6 +36,7 @@ const Navbar = () => {
               width: { xs: "40px", sm: "50px" },
               height: { xs: "40px", sm: "50px" },
               padding: "2px",
+              color: "#757575",
             }}
             onClick={() => setOpenList(!openList)}
           >

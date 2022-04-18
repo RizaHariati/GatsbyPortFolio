@@ -18,7 +18,12 @@ const Footer = () => {
 
           align="right"
         >
-          Designed by pikisuperstar / Freepik
+          <a href="https://www.freepik.com/pikisuperstar">
+            Back ground designed by pikisuperstar / Freepik
+          </a>
+          <a href="https://www.vecteezy.com/free-vector/phone">
+            Phone Vectors by Vecteezy
+          </a>
         </Typography>
       </a>
     </Drawer>

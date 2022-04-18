@@ -11,7 +11,6 @@ const useStyles = makeStyles(theme => {
       width: "100%",
       height: { xs: 30, md: 40 },
     },
-
     buttonMenu: {
       display: "none",
 
@@ -28,7 +27,13 @@ const ListMenu = () => {
   return (
     <div style={{ width: "100%" }}>
       <Link to="/">
-        <Button startIcon={<Home />} color="primary" className={classes.button}>
+        <Button
+          startIcon={<Home />}
+          color="primary"
+          className={classes.button}
+          variant="text"
+          style={{ borderBottom: "1px solid #62626154", borderRadius: 0 }}
+        >
           <Typography variant="h4" color="primary">
             Home
           </Typography>
@@ -41,6 +46,7 @@ const ListMenu = () => {
         color="primary"
         className={classes.button}
         onClick={() => setOpen(!open)}
+        style={{ borderBottom: "1px solid #62626154", borderRadius: 0 }}
       >
         <Typography variant="h4" color="primary">
           Project
@@ -54,6 +60,7 @@ const ListMenu = () => {
           startIcon={<PersonRounded />}
           color="primary"
           className={classes.button}
+          style={{ borderBottom: "1px solid #62626154", borderRadius: 0 }}
         >
           <Typography variant="h4" color="primary">
             About

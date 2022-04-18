@@ -1,5 +1,5 @@
 import React from "react"
-import { Typography, Button, Collapse, Divider, TextField } from "@mui/material"
+import { Typography, Button, Collapse, Divider } from "@mui/material"
 import { projects } from "../data/data"
 import { CheckCircleOutline } from "@mui/icons-material"
 import { Link } from "gatsby"
@@ -8,7 +8,12 @@ import "../styles/styles.css"
 
 const DropMenu = ({ open, setOpen }) => {
   return (
-    <div onClick={() => setOpen(!open)} tabIndex={0}>
+    <div
+      role="button"
+      onClick={() => setOpen(!open)}
+      tabIndex={0}
+      onKeyDown={() => console.log("key down")}
+    >
       <Collapse in={open}>
         {projects.map(project => {
           const { id, title } = project

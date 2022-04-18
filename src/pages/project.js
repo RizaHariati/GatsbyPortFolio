@@ -56,69 +56,120 @@ const Project = ({ data, location }) => {
       <Layout>
         <Seo title={title} description={newText} />
         <Grid item md={9} xs={12} sx={gridBanner}>
-          <Paper variant="outlined" sx={paperBanner}>
-            <Typography variant="h2" sx={titleFont}>
-              Project {id} - {title}
-              <Divider variant="fullWidth" sx={fullDivider} />
-            </Typography>
+          <div
+            style={{
+              width: "100%",
+              overflowX: "hidden",
+              border: "1px solid #62626154",
+              borderRadius: "5px",
+            }}
+          >
+            <Paper variant="outlined" sx={paperBanner}>
+              <Typography variant="h2" sx={titleFont}>
+                Project {id} - {title}
+                <Divider variant="fullWidth" sx={fullDivider} />
+              </Typography>
 
-            <Grid container spacing={2} sx={smallGrid}>
-              <Grid item xs={2}>
-                <Avatar sx={sideAvatar}>
-                  <StaticImage
-                    src="../images/MyPhoto.jpg"
-                    alt="myPhoto"
-                    placeholder="tracedSVG"
-                    width={200}
-                    height={200}
-                    objectFit="cover"
-                    objectPosition="center"
-                  />
-                </Avatar>
-              </Grid>
-              <Grid item xs={10}>
-                {text.map((item, index) => {
-                  return (
-                    <Typography variant="h4" sx={descriptionFont} key={index}>
-                      {item}
-                    </Typography>
-                  )
-                })}
-                <a href={url}>
-                  <Typography variant="h4" color="secondary">
-                    Visit Website
-                  </Typography>
-                </a>
-              </Grid>
-
-              <Divider variant="fullWidth" sx={fullDivider} />
-              <Grid item xs={12}>
-                <Grid container spacing={2} sx={imageGrid}>
-                  {myImages.map((image, index) => {
-                    const pathToImage = getImage(image.gatsbyImageData)
+              <Grid container spacing={2} sx={smallGrid}>
+                <Grid item xs={2}>
+                  <Avatar sx={sideAvatar}>
+                    <StaticImage
+                      src="../images/MyPhoto.jpg"
+                      alt="myPhoto"
+                      placeholder="tracedSVG"
+                      width={200}
+                      height={200}
+                      objectFit="cover"
+                      objectPosition="center"
+                    />
+                  </Avatar>
+                </Grid>
+                <Grid item xs={10}>
+                  {text.map((item, index) => {
                     return (
-                      <Grid
-                        item
-                        md={4}
-                        sm={12}
-                        xs={12}
-                        key={index}
-                        sx={{ width: "100%", display: "flex" }}
-                      >
-                        <GatsbyImage
-                          image={pathToImage}
-                          alt={title}
-                          objectFit="cover"
-                          objectPosition="center"
-                          className="webImage"
-                        />
-                      </Grid>
+                      <Typography variant="h4" sx={descriptionFont} key={index}>
+                        {item}
+                      </Typography>
                     )
                   })}
+                  <a href={url}>
+                    <Typography variant="h4" color="secondary">
+                      Visit Website
+                    </Typography>
+                  </a>
+                </Grid>
+
+                <Divider variant="fullWidth" sx={fullDivider} />
+                <Grid item xs={12}>
+                  <Grid container spacing={2} sx={imageGrid}>
+                    {myImages.map((image, index) => {
+                      const pathToImage = getImage(image.gatsbyImageData)
+                      if (myImages.length > 2) {
+                        return (
+                          <Grid
+                            item
+                            md={4}
+                            sm={12}
+                            xs={12}
+                            key={index}
+                            sx={{ display: "flex" }}
+                          >
+                            <GatsbyImage
+                              image={pathToImage}
+                              alt={title}
+                              objectFit="cover"
+                              objectPosition="center"
+                              className="webImage"
+                            />
+                          </Grid>
+                        )
+                      } else {
+                        if (index === 0) {
+                          return (
+                            <Grid
+                              item
+                              md={4}
+                              sm={12}
+                              xs={12}
+                              key={index}
+                              sx={{ display: "flex" }}
+                            >
+                              <GatsbyImage
+                                image={pathToImage}
+                                alt={title}
+                                objectFit="cover"
+                                objectPosition="center"
+                                className="webImage"
+                              />
+                            </Grid>
+                          )
+                        } else {
+                          return (
+                            <Grid
+                              item
+                              md={8}
+                              sm={12}
+                              xs={12}
+                              key={index}
+                              sx={{ display: "flex" }}
+                            >
+                              <GatsbyImage
+                                image={pathToImage}
+                                alt={title}
+                                objectFit="cover"
+                                objectPosition="center"
+                                className="webImage"
+                              />
+                            </Grid>
+                          )
+                        }
+                      }
+                    })}
+                  </Grid>
                 </Grid>
               </Grid>
-            </Grid>
-          </Paper>
+            </Paper>
+          </div>
         </Grid>
       </Layout>
     )
@@ -131,7 +182,11 @@ export const result = graphql`
   query projectImages {
     allImageSharp {
       nodes {
-        gatsbyImageData(placeholder: DOMINANT_COLOR, layout: CONSTRAINED)
+        gatsbyImageData(
+          placeholder: DOMINANT_COLOR
+          layout: CONSTRAINED
+          height: 200
+        )
       }
     }
   }

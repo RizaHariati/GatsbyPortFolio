@@ -20,8 +20,9 @@ const useStyles = makeStyles({
     bottom: "auto",
     left: 0,
     width: "100vw",
-    height: "160vh",
+    height: "100vh",
     overflow: "hidden",
+    resize: "vertical",
     zIndex: -10,
   },
 })
@@ -33,6 +34,7 @@ const Layout = ({ children }) => {
       <StaticImage
         src="../images/background.jpg"
         alt="background"
+        layout="constrained"
         className={classes.gatsbyBackground}
       />
       <Container maxWidth="lg">

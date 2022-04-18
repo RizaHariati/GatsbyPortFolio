@@ -4,9 +4,9 @@
   --clr-1: #0c2a3a;
   --clr-1-opacity: #083147;
   --clr-1-opacity-2: #0c2a3ad7;
-  --font-clr-1: #dfdbd3;
-  --font-clr-2: #f3f3f4;
-  --font-clr-3: #6f8a99;
+  --font-clr-1: #aaa8a4;
+  --font-clr-2: #dfdbd3;
+  --font-clr-3: #62626154;
   --accent-clr-1: #c1436d;
   --accent-clr-2: #f4abaa;
   --mix-blend: 0.85;
@@ -27,7 +27,7 @@
 }
 
 a {
-  color: black;
+  color: #dfdbd3;
 }
 
 .showOnLarge {

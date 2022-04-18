@@ -8,6 +8,7 @@ const paper = {
   justifyContent: "space-between",
   padding: 2,
   paddingInline: { md: 0, sm: 1, xs: 1 },
+  border: "1px solid #62626154",
 }
 const paperSocial = {
   height: "fit-content",
@@ -31,8 +32,10 @@ const paperBanner = {
   // height: "fit-content",
   height: "calc(100vh - 60px)",
   overflowY: "scroll",
-  width: "100%",
+  scrollbars: "hidden",
+  width: "103%",
   display: "flex",
+  overflowX: "hidden",
   backgroundColor: "transparent",
   flexDirection: "column",
   alignItems: "center",
@@ -46,7 +49,7 @@ const cardActions = {
   alignItems: "center",
   justifyContent: "flex-start",
   padding: 1,
-  borderBottom: "0.5px solid gray",
+  // borderBottom: "0.5px solid gray",
 }
 
 const sideAvatar = {
@@ -66,7 +69,6 @@ const descriptionFont = {
   align: "left",
 }
 const imageGrid = {
-  width: "100%",
   margin: "auto",
   marginBottom: { md: 0, xs: "300px" },
   display: "flex",
