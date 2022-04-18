@@ -76,9 +76,6 @@ const Project = ({ data, location }) => {
                     <StaticImage
                       src="../images/MyPhoto.jpg"
                       alt="myPhoto"
-                      placeholder="tracedSVG"
-                      width={200}
-                      height={200}
                       objectFit="cover"
                       objectPosition="center"
                     />

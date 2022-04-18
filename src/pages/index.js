@@ -52,8 +52,6 @@ const Index = ({ data }) => {
               <StaticImage
                 src="../images/MyPhoto.jpg"
                 alt="riza hariati"
-                width={200}
-                height={200}
                 objectFit="cover"
                 objectPosition="center"
               />
@@ -105,7 +103,6 @@ const Index = ({ data }) => {
                           <GatsbyImage
                             image={pathToImage}
                             alt={imageLink}
-                            height={120}
                             style={{
                               margin: "auto",
                             }}
