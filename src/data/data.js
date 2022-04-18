@@ -65,7 +65,7 @@ const projects = [
   {
     id: "azri006",
     url: "https://expo.dev/@rizahariati/sudahnonton-client",
-    type: "Phone App",
+    type: "Website",
     title: "SudahNonton-Client",
     imageLink: "Web6",
     text: [
