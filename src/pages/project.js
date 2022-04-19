@@ -28,11 +28,9 @@ const Project = ({ data, location }) => {
     const getID = async () => {
       const projectID = await location.state.myProp
       setMyImages([])
-      const newProject = await projects.find(
-        project => project.id === projectID
-      )
-      await setMyProject(newProject)
-      const newImages = await newProject.images
+      const newProject = projects.find(project => project.id === projectID)
+      setMyProject(newProject)
+      const newImages = newProject.images
 
       allImages.forEach(image => {
         newImages.forEach(newImage => {

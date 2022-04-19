@@ -98,7 +98,7 @@ const Index = ({ data }) => {
                 return (
                   <Grid item md={6} xs={12} key={id}>
                     <Card sx={card} elevation={2}>
-                      <a href={url}>
+                      <Link to="/project/" state={{ myProp: id }}>
                         <CardActionArea sx={cardActions}>
                           <GatsbyImage
                             image={pathToImage}
@@ -108,7 +108,7 @@ const Index = ({ data }) => {
                             }}
                           />
                         </CardActionArea>
-                      </a>
+                      </Link>
                       <CardActions
                         sx={[
                           cardActions,
@@ -127,7 +127,7 @@ const Index = ({ data }) => {
                             size="small"
                             color="primary"
                           >
-                            <a href={url}>visit website</a>
+                            <a href={url}>Visit website</a>
                           </Button>
 
                           <Button

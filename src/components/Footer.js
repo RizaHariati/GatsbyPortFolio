@@ -15,14 +15,18 @@ const Footer = () => {
         <Typography
           variant="body2"
           // color="primary"
-
-          align="right"
+          style={{
+            fontSize: "10px",
+            lineHeight: "10px",
+            padding: "5px",
+          }}
+          align="center"
         >
           <a href="https://www.freepik.com/pikisuperstar">
-            Back ground designed by pikisuperstar / Freepik
+            Background by pikisuperstar / Freepik *
           </a>
           <a href="https://www.vecteezy.com/free-vector/phone">
-            Phone Vectors by Vecteezy
+            &nbsp; Phone Vectors by Vecteezy
           </a>
         </Typography>
       </a>
