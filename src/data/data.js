@@ -1,13 +1,13 @@
 const projects = [
   {
     id: "azri001",
-    url: "https://rsuripsumoharjo-mockup.netlify.app/",
+    url: "https://rsuripsumoharjo-model.netlify.app/",
     type: "Website",
     title: "RS. Urip Sumoharjo",
     imageLink: "Web1",
     text: [
       "A website design for a local hospital in Bandar Lampung. Inspired by Mayo Clinic's website. A very simple design, easy-to-use, informative but not too crowded with too many useless details.",
-      " The core of this website design is ReactJS, supported by Formik, react-router-DOM, and Yup",
+      "The core of this website design is Next.JS, supported by Redux ToolkitFormik, Yup, React leaflet and Tailwinds",
     ],
     images: ["urip-website", "urip-phone"],
   },
