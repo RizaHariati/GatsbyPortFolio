@@ -13,17 +13,15 @@ const projects = [
   },
   {
     id: "azri002",
-    url: "https://azribook.netlify.app/",
-    type: "Website",
-    title: "Azribook",
+    url: "https://rs-urip-sumoharjo-api.herokuapp.com/",
+    type: "Documentation",
+    title: "RS.Urip Sumoharjo API",
     imageLink: "Web2",
     text: [
-      "This website is based on Facebook’s website design, mainly to showcase my ability in accessing and processing data with Rest API. ",
-      "Since the focus is on the API only some of the elements, related to API are functional and the rest is just dummies ",
-      "The data is thanks to DUMMYAPI.IO whose providing free ready to use API Service filled with dummy data",
-      " I’m using React JS as the core of this web design with the help of Axios, Figma, and React router DOM ",
+      "An API documentation site providing data for RS Urip Sumoharjo website. Made using Node.JS, Express.JS and Swagger UI.",
+      "I'm using MongoDB as NoSQL database program with the help of Mongoose library  ",
     ],
-    images: ["azribook-website", "azribook-phone"],
+    images: ["urip-api-website", "urip-api-phone"],
   },
   {
     id: "azri003",
@@ -40,15 +38,17 @@ const projects = [
   },
   {
     id: "azri004",
-    url: "https://azriblog.000webhostapp.com/",
+    url: "https://azribook.netlify.app/",
     type: "Website",
-    title: "Azriblog",
+    title: "Azribook",
     imageLink: "Web4",
     text: [
-      "I always thought Laravel is only used for back-end side of development. But after learning from a very professional, very thorough Web Programming UNPAS tutorial on Laravel, I realized that it's actually very good for a simple front-end side of web development ",
-      "Based on that tutorial, I created this blog website, with the help of the good old Bootstrap and MySQL, show casing my laravel implementation on routing, templating HTML, and authentication",
+      "This website is based on Facebook’s website design, mainly to showcase my ability in accessing and processing data with Rest API. ",
+      "Since the focus is on the API only some of the elements, related to API are functional and the rest is just dummies ",
+      "The data is thanks to DUMMYAPI.IO whose providing free ready to use API Service filled with dummy data",
+      " I’m using React JS as the core of this web design with the help of Axios, Figma, and React router DOM ",
     ],
-    images: ["azriblog-website", "azriblog-phone"],
+    images: ["azribook-website", "azribook-phone"],
   },
 
   {

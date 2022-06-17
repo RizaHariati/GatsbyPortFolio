@@ -28,7 +28,7 @@ const card = {
 
 const Index = ({ data }) => {
   const allImages = data.allImageSharp.nodes
-  const newProjects = projects.slice(0).reverse()
+  // const newProjects = projects.slice(0).reverse()
   return (
     <Layout>
       <Seo title="Home" description="welcome to Riza Hariati Portfolio Page" />
@@ -87,7 +87,7 @@ const Index = ({ data }) => {
                 marginBottom: { md: 0, xs: "200px" },
               }}
             >
-              {newProjects.map(project => {
+              {projects.map(project => {
                 const { id, title, imageLink, url } = project
                 const newImage = allImages.find(image => {
                   return image.gatsbyImageData.images.sources[0].srcSet.includes(

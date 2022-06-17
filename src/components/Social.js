@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import "../styles/styles.css"
 import { social } from "../styles/styles"
+import { GitHub } from "@mui/icons-material"
 
 const Social = () => {
   return (
@@ -10,7 +11,7 @@ const Social = () => {
       <div className="socials">
         <a className="social-btn" href="https://github.com/RizaHariati">
           <Avatar variant="square" sx={social}>
-            <StaticImage src="../images/github.svg" alt="github" />
+            <GitHub />
           </Avatar>
         </a>
         <a href="https://www.instagram.com/rizahariati/?hl=en">
