@@ -6,7 +6,7 @@ const projects = [
     title: "RS. Urip Sumoharjo",
     imageLink: "Web1",
     text: [
-      "A website design for a local hospital in Bandar Lampung. Inspired by Mayo Clinic's website. A very simple design, easy-to-use, informative but not too crowded with too many useless details.",
+      "A website design proposal for a local hospital in Bandar Lampung. Inspired by Mayo Clinic's website. A very simple design, easy-to-use, informative but not too crowded with too many useless details.",
       "The core of this website design is Next.JS, supported by Redux ToolkitFormik, Yup, React leaflet and Tailwinds",
     ],
     images: ["urip-website", "urip-phone"],
@@ -18,7 +18,7 @@ const projects = [
     title: "RS.Urip Sumoharjo API",
     imageLink: "Web2",
     text: [
-      "An API documentation site providing data for RS Urip Sumoharjo website. Made using Node.JS, Express.JS and Swagger UI.",
+      "A fake API documentation site providing data for RS Urip Sumoharjo website. Made using Node.JS, Express.JS and Swagger UI.",
       "I'm using MongoDB as NoSQL database program with the help of Mongoose library  ",
     ],
     images: ["urip-api-website", "urip-api-phone"],
@@ -86,14 +86,16 @@ const aboutData = [
     tools: [
       "Javascript/Css/Html",
       "Java",
-      "ReactJS",
+      "React.JS",
       "React Native",
-      "NodeJS",
-      "Express",
-      "GatsbyJS",
+      "Gatsby.JS",
+      "Next.JS",
+      "Node.JS",
+      "Express.JS",
       "PHP",
       "Laravel",
       "MySQL",
+      "Mongodb",
     ],
   },
   {
@@ -102,6 +104,7 @@ const aboutData = [
     tools: [
       "Photoshop",
       "Material-UI",
+      "Tailwinds",
       "Figma",
       "Sketchup",
       "3dsMax",
