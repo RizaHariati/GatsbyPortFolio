@@ -7,7 +7,8 @@ const projects = [
     imageLink: "Web1",
     text: [
       "A website design proposal for a local hospital in Bandar Lampung. Inspired by Mayo Clinic's website. A very simple design, easy-to-use, informative but not too crowded with too many useless details.",
-      "The core of this website design is Next.JS, supported by Redux ToolkitFormik, Yup, React leaflet and Tailwinds",
+      "The core of this website design is Next.JS, supported by Redux ToolkitFormik, Yup and React leaflet",
+      "When I created this website, I just learned Tailwind. And I really like it, so I use it here.",
     ],
     images: ["urip-website", "urip-phone"],
   },
@@ -33,6 +34,7 @@ const projects = [
       "A simple e-commerce website where you can order as a guest or as a member. Using a map and a phone number to identify the customer. After register, customer can put the food and beverages into the cart list, and then put the order in. And paying in cash",
       "This website uses Gatsby JS with the support of Contentful to manage the website's content which later accessed using GraphQL ",
       "Since the website is very simple I chose to use useContext and useReducer instead of Redux",
+      "For styling I'm using the good old Material UI",
     ],
     images: ["P3-website", "P3-phone"],
   },
@@ -59,6 +61,7 @@ const projects = [
     imageLink: "Web5",
     text: [
       "This is a project for my own amusement. I love watching movies and tv shows. But I tend to forget, whether I have watched the show or not. So using Laravel 8, I created the database website. This web also serves as REST API provider, so I can consume the data using other data that I created next. The design is based on the Netflix website design. All the data is thanks to The Movie DB",
+      "For styling I'm using Bootstrap and Bootstrap Icons",
     ],
     images: ["sudahnonton-api-website", "sudahnonton-api-phone"],
   },
@@ -70,6 +73,7 @@ const projects = [
     imageLink: "Web6",
     text: [
       "I watched so many movies and tv shows over the years, so when I'm about to watch a new show, I want to check whether I've already watched it or not. That's what this app is for. With my phone, I can check anywhere, anytime, all of those shows. \n This is an Android App that can access the database from the Rest API that I've created earlier. I can also add a new show, put shows on my watch list, if I want to watch it again. Other users can also use this app if they are looking for ideas of what movies or tv shows they are going to watch next. All the data is thanks to The Movie DB",
+      "For styling, I'm using React Native Paper, because it's similar to Material UI which I've used in some of my React.JS projects",
     ],
     images: [
       "sudahnonton-client-3-phone",
